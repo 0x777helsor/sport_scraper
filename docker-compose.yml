@@ -1,0 +1,41 @@
+services:
+  api:
+    build: .
+    image: sport-scraper:latest
+    command: ["uvicorn", "sport_scraper.api.main:app", "--host", "0.0.0.0", "--port", "8080"]
+    ports:
+      - "8080:8080"
+    environment:
+      SPORT_SCRAPER_AUTH: "${SPORT_SCRAPER_AUTH:-0}"
+    volumes:
+      - sport_data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://127.0.0.1:8080/v1/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  worker:
+    build: .
+    image: sport-scraper:latest
+    command: ["python", "-m", "sport_scraper.cli", "worker", "--poll", "1"]
+    volumes:
+      - sport_data:/app/data
+    restart: unless-stopped
+    depends_on:
+      - api
+
+  # Periodic discovery of today's + tomorrow's fixtures.
+  scheduler:
+    build: .
+    image: sport-scraper:latest
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - "while true; do python -m sport_scraper.cli sync; sleep 21600; done"
+    volumes:
+      - sport_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  sport_data:
