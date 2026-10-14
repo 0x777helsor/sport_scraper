@@ -8,7 +8,7 @@ stable internal model.
 > **Core idea:** a background worker owns *all* upstream traffic and writes to a
 > local SQLite store; the API only **reads**. Consumers never see SofaScore.
 
-This project is **standalone** — it is not part of `xpredict`/`ULtFuse`.
+This project is **standalone**
 
 ---
 
