@@ -10,10 +10,12 @@ class Endpoints:
     def __init__(self, client: SofaScoreClient | None = None):
         self.client = client or SofaScoreClient()
 
-    def tournament_index(self, sport: str, d: date | str = date.today()) -> dict[str, Any]:
+    def tournament_index(
+        self, sport: str, d: date | str = date.today(), page: int = 1
+    ) -> dict[str, Any]:
         if isinstance(d, date):
             d = d.strftime("%Y-%m-%d")
-        return self.client.get(f"/sport/{sport}/scheduled-tournaments/{d}/page/1")
+        return self.client.get(f"/sport/{sport}/scheduled-tournaments/{d}/page/{page}")
 
     def tournament_events(self, unique_tournament_id: int, d: date | str = date.today()) -> dict[str, Any]:
         if isinstance(d, date):

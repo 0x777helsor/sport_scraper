@@ -912,6 +912,7 @@ When/if you move to a VPS:
 |---|---|
 | Parsers | **Golden fixtures** — commit real captured JSON per sport; assert normalized output |
 | Client | Mock transport; assert headers, pacing, backoff, retry on 429/5xx |
+| Pagination | Fake index pages: assert crawl-until-`hasNextPage`, dedupe, and page cap |
 | Dedup | Concurrency test: fire N identical misses, assert one job + one fetch |
 | Repo | Round-trip upserts; assert idempotency (double-write = same state) |
 | API | Contract tests via TestClient; 200/202/304/429/401 shapes |
@@ -961,7 +962,7 @@ successful fetch, queue depth).
 | 5 | SQLite write contention (if second writer added) | Low now | Medium | single-writer rule; repo layer; pre-planned Postgres path |
 | 6 | API key leakage | Low | Medium | hash-at-rest; per-client revocation; no anonymous tier |
 | 7 | Legal/ToS exposure | Medium | Medium | private-by-default; no redistribution; documented posture |
-| 8 | Tennis schedule paging misses events | Medium | Low | iterate pages until exhausted; assert page count changes |
+| 8 | Schedule-index paging misses tournaments | Medium | Low | crawl pages until `hasNextPage` false (done); `scripts/test_pagination.py` guards it |
 
 ---
 

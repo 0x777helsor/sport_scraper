@@ -22,8 +22,12 @@ SQLite store and queues misses as jobs.
 
 ## Verified behaviours
 
-- Full six-sport sync for one date: **~81s, ~2,700 events** (8 concurrent
-  fetchers, single writer).
+- Full six-sport sync for one date: **~2,700 events** (8 concurrent fetchers,
+  single writer).
+- Discovery now crawls the paged tournament index until `hasNextPage` is false
+  (football needs ~8 pages/day; page-1-only dropped later tournaments).
+- `sync --days N` discovers N consecutive days; the Compose scheduler runs
+  `sync --days 4` every 6h.
 - Store: 2,327 events / 227 statistics / 254 odds / ~3,588 raw payloads.
 - `202 → worker → 200`: verified over HTTP and through the provider adapter.
 - Job dedup: N identical misses ⇒ **one** job, **one** upstream fetch.
@@ -41,6 +45,7 @@ SQLite store and queues misses as jobs.
 .venv/bin/python3 scripts/test_e2e.py       # 202 -> worker -> 200
 .venv/bin/python3 scripts/test_client.py    # retry/backoff/breaker
 .venv/bin/python3 scripts/test_fixtures.py  # per-sport parser drift
+.venv/bin/python3 scripts/test_pagination.py # index paging + multi-day sync
 .venv/bin/python3 scripts/phase0_probe.py   # access gate
 ```
 

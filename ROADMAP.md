@@ -59,7 +59,7 @@ writer, raw-payload ledger, and a sync CLI.
 - [x] Project skeleton (`uv`, `pyproject.toml`, package layout)
 - [x] `sofascore/sports.py` — registry (slug, schedule kind, `side_kind`, extras)
 - [x] `sofascore/client.py` — session, headers, global pacing/retries/backoff, circuit breaker
-- [x] `sofascore/endpoints.py` — typed wrappers (two-step discovery, event/stats/odds)
+- [x] `sofascore/endpoints.py` — typed wrappers (two-step discovery, **paged index**, event/stats/odds)
 - [x] `sofascore/normalize.py` — normalize `/event`, `statistics`, `odds` (basic)
 - [x] `store/sqlite.py` (WAL, schema, upserts, thread-safe writes)
 - [x] `store/repo.py` — repository layer to allow later Postgres migration

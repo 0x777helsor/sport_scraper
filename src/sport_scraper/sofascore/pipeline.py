@@ -16,6 +16,10 @@ SPORTS = ("football", "basketball", "baseball", "american-football", "tennis", "
 # Concurrency is for *reads* only. Writes still funnel through one Store.
 FETCH_CONCURRENCY = 8
 
+# Safety cap on the tournament-index crawl (upstream paginates until
+# hasNextPage is false; football needs ~8 pages for a busy day).
+MAX_INDEX_PAGES = 40
+
 
 class Pipeline:
     """Discovery pipeline: tournament index -> events -> (optional) details.
@@ -36,15 +40,31 @@ class Pipeline:
         return f"ss:{event_id}"
 
     def _tournament_ids(self, sport: str, d: str) -> list[int]:
-        idx = self.ep.tournament_index(sport, d)
+        """Crawl the paged tournament index until ``hasNextPage`` is false.
+
+        The index is paginated (100 items/page) and a busy day for football can
+        span ~8 pages; tournaments on later pages are otherwise silently lost.
+        IDs are deduped because a tournament can repeat within/across pages.
+        """
         ids: list[int] = []
-        for item in idx.get("scheduled", []) or []:
-            if not isinstance(item, dict):
-                continue
-            t = item.get("tournament")
-            ut = (t or {}).get("uniqueTournament") if isinstance(t, dict) else None
-            if isinstance(ut, dict) and "id" in ut:
-                ids.append(ut["id"])
+        seen: set[int] = set()
+        page = 1
+        while page <= MAX_INDEX_PAGES:
+            idx = self.ep.tournament_index(sport, d, page=page)
+            items = idx.get("scheduled") or []
+            if not items:
+                break
+            for item in items:
+                if not isinstance(item, dict):
+                    continue
+                t = item.get("tournament")
+                ut = (t or {}).get("uniqueTournament") if isinstance(t, dict) else None
+                if isinstance(ut, dict) and "id" in ut and ut["id"] not in seen:
+                    seen.add(ut["id"])
+                    ids.append(ut["id"])
+            if not idx.get("hasNextPage"):
+                break
+            page += 1
         return ids
 
     def _fetch_events(self, tid: int, d: str) -> dict[str, Any]:
@@ -105,5 +125,36 @@ class Pipeline:
             except Exception as exc:  # noqa: BLE001
                 per_sport[sport] = -1
                 print(f"WARN: index {sport}: {exc}")
+        return {
+            "date": ds,
+            "total_events": sum(v for v in per_sport.values() if v > 0),
+            "by_sport": per_sport,
+        }
+
+    def run_days(
+        self,
+        days: int = 1,
+        start: date | None = None,
+        sports: tuple[str, ...] = SPORTS,
+        with_stats: bool = False,
+        with_odds: bool = False,
+    ) -> dict[str, Any]:
+        """Discover ``days`` consecutive dates starting at ``start`` (default today)."""
+        from datetime import timedelta
+
+        start = start or date.today()
+        per_day: dict[str, Any] = {}
+        for i in range(max(1, days)):
+            day = start + timedelta(days=i)
+            per_day[day.strftime("%Y-%m-%d")] = self.run_day(
+                day, sports=sports, with_stats=with_stats, with_odds=with_odds
+            )
+        return {
+            "start": start.strftime("%Y-%m-%d"),
+            "days": max(1, days),
+            "total_events": sum(v["total_events"] for v in per_day.values()),
+            "by_day": per_day,
+        }
+
+    def close(self) -> None:
         self.store.close()
-        return {"date": ds, "total_events": sum(v for v in per_sport.values() if v > 0), "by_sport": per_sport}

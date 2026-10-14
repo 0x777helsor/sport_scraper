@@ -26,13 +26,13 @@ services:
     depends_on:
       - api
 
-  # Periodic discovery of today's fixtures.
+  # Periodic discovery of today's + next 3 days' fixtures (every 6h).
   scheduler:
     build: .
     image: sport-scraper:latest
     entrypoint: ["/bin/sh", "-c"]
     command:
-      - "while true; do python -m sport_scraper.cli sync; sleep 21600; done"
+      - "while true; do python -m sport_scraper.cli sync --days 4; sleep 21600; done"
     volumes:
       - sport_data:/app/data
     restart: unless-stopped

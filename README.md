@@ -41,8 +41,10 @@ This project is **standalone** — it is not part of `xpredict`/`ULtFuse`.
 - Working host: **`https://www.sofascore.com/api/v1`**
   (`api.sofascore.com` returns `403` from this network).
 - Discovery is **two-step**:
-  1. `/sport/{sport}/scheduled-tournaments/{date}/page/1` → tournament index
-  2. `/unique-tournament/{id}/scheduled-events/{date}` → the events
+  1. `/sport/{sport}/scheduled-tournaments/{date}/page/{n}` → tournament index,
+     crawled page by page until `hasNextPage` is false (a busy football day
+     spans ~8 pages; dropping later pages silently loses tournaments)
+  2. `/unique-tournament/{id}/scheduled-events/{date}` → the events (unpaged)
 - Event detail: `/event/{id}`, `/event/{id}/statistics`, `/event/{id}/odds/1/all`.
 - Full six-sport sync for one date: ~80s, ~2,700 events (concurrent fetches,
   single writer).
@@ -84,7 +86,7 @@ uvicorn sport_scraper.api.main:app --port 8081
 
 | Command | Purpose |
 |---|---|
-| `sync [--date YYYY-MM-DD]` | discover fixtures/results for a day (events only) |
+| `sync [--date YYYY-MM-DD] [--days N]` | discover fixtures/results for N consecutive days (events only) |
 | `worker [--once] [--poll S]` | drain the job queue (event/stats/odds fetches) |
 | `show ss:ID [--full]` | inspect a cached event |
 | `jobs [--limit N]` | list recent jobs |
@@ -179,6 +181,7 @@ RUNBOOK.md             operations runbook (PLAN.md §16)
 .venv/bin/python3 scripts/test_client.py     # retries / backoff / breaker
 .venv/bin/python3 scripts/test_e2e.py        # miss -> 202 -> worker -> 200
 .venv/bin/python3 scripts/test_fixtures.py   # per-sport parser drift
+.venv/bin/python3 scripts/test_pagination.py # index paging + multi-day sync
 ```
 
 Fixtures are captured from real payloads (`scripts/capture_fixtures.py`) and

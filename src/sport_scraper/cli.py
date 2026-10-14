@@ -16,8 +16,12 @@ from sport_scraper.worker.runner import Worker
 
 
 def cmd_sync(args: argparse.Namespace) -> int:
-    d = date.fromisoformat(args.date) if args.date else date.today()
-    res = Pipeline().run_day(d)
+    start = date.fromisoformat(args.date) if args.date else date.today()
+    p = Pipeline()
+    try:
+        res = p.run_days(days=args.days, start=start)
+    finally:
+        p.close()
     print(json.dumps(res))
     return 0
 
@@ -89,8 +93,9 @@ def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(prog="sport-scraper", description="SofaScore sport data provider CLI")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    sp = sub.add_parser("sync", help="ingest a day of fixtures/results/stats/odds")
-    sp.add_argument("--date", help="YYYY-MM-DD (default: today)")
+    sp = sub.add_parser("sync", help="ingest fixtures/results for one or more days")
+    sp.add_argument("--date", help="start date YYYY-MM-DD (default: today)")
+    sp.add_argument("--days", type=int, default=1, help="number of consecutive days (default: 1)")
     sp.set_defaults(func=cmd_sync)
 
     wp = sub.add_parser("worker", help="run the job-queue worker")
