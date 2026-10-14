@@ -87,6 +87,7 @@ uvicorn sport_scraper.api.main:app --port 8081
 | Command | Purpose |
 |---|---|
 | `sync [--date YYYY-MM-DD] [--days N]` | discover fixtures/results for N consecutive days (events only) |
+| `warm --tournament ID [--tournament ID2,...] [--map-file PATH] [--sport S] [--date YYYY-MM-DD] [--days N] [--stats] [--odds]` | targeted sync: fetch only the listed `uniqueTournament` ids for a date range (no index crawl) |
 | `worker [--once] [--poll S]` | drain the job queue (event/stats/odds fetches) |
 | `show ss:ID [--full]` | inspect a cached event |
 | `jobs [--limit N]` | list recent jobs |
@@ -182,6 +183,7 @@ RUNBOOK.md             operations runbook (PLAN.md §16)
 .venv/bin/python3 scripts/test_e2e.py        # miss -> 202 -> worker -> 200
 .venv/bin/python3 scripts/test_fixtures.py   # per-sport parser drift
 .venv/bin/python3 scripts/test_pagination.py # index paging + multi-day sync
+.venv/bin/python3 scripts/test_warm.py       # targeted warm (mapped tournaments)
 ```
 
 Fixtures are captured from real payloads (`scripts/capture_fixtures.py`) and

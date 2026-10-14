@@ -41,6 +41,7 @@ Watch:
 | `429` storms | pacing too tight / retry loop | Raise `SofaConfig.min_interval` or lower `FETCH_CONCURRENCY`; confirm backoff honours `Retry-After`. |
 | Queue backing up | upstream slow/blocked | Check `/v1/upstream`; reduce enrichment scope; scale worker concurrency cautiously. |
 | Stale data | scheduler stalled | Check `scheduler` container logs; confirm the 6h loop is running; run `sync` manually. |
+| One league/date missing after a long `sync` | `sync` index crawl was interrupted before that tournament's page | `... cli warm --tournament <id> --date <YYYY-MM-DD> --days <N>` (or `--map-file`); it fetches only the mapped tournaments. |
 | Parse failures spiking | upstream shape drift | Inspect `raw_payloads` for the failing URL; update the parser; run `scripts/capture_fixtures.py` to refresh golden fixtures. |
 | `202` never turns `done` | worker down | `docker compose ps`; restart `worker`; jobs are leased and reclaimed automatically. |
 | `database is locked` | second writer introduced | Enforce the single-writer rule; only one `worker` service. WAL allows many readers. |

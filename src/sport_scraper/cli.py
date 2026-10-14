@@ -9,7 +9,7 @@ from datetime import date
 
 from sport_scraper.config import DB_PATH
 from sport_scraper.sofascore.endpoints import Endpoints
-from sport_scraper.sofascore.pipeline import Pipeline
+from sport_scraper.sofascore.pipeline import SPORTS, Pipeline
 from sport_scraper.store.jobs import Jobs
 from sport_scraper.store.sqlite import Store
 from sport_scraper.worker.runner import Worker
@@ -20,6 +20,86 @@ def cmd_sync(args: argparse.Namespace) -> int:
     p = Pipeline()
     try:
         res = p.run_days(days=args.days, start=start)
+    finally:
+        p.close()
+    print(json.dumps(res))
+    return 0
+
+
+def _parse_tournament_ids(values: list[str]) -> list[int]:
+    """Parse repeatable and/or comma-separated tournament-id strings."""
+    ids: list[int] = []
+    for raw in values:
+        for piece in str(raw).split(","):
+            piece = piece.strip()
+            if not piece:
+                continue
+            try:
+                tid = int(piece)
+            except ValueError as exc:
+                raise ValueError(f"invalid tournament id {piece!r}") from exc
+            if tid <= 0:
+                raise ValueError(f"tournament id must be positive: {tid}")
+            ids.append(tid)
+    return ids
+
+
+def _load_tournament_map(path: str) -> list[int]:
+    """Read tournament ids from a JSON map or list.
+
+    Accepts ``{"label": 18}`` (the ULtFUSE ``SPORT_SCRAPER_TOURNAMENTS`` shape),
+    ``{"label": {"id": 18}}``, or a bare ``[18, 53]``. Labels are ignored; only
+    the positive integer ids are collected.
+    """
+    with open(path, encoding="utf-8") as fh:
+        raw = json.load(fh)
+    if isinstance(raw, dict):
+        entries = list(raw.values())
+    elif isinstance(raw, list):
+        entries = raw
+    else:
+        raise ValueError("tournament map must be a JSON object or list")
+    ids: list[int] = []
+    for val in entries:
+        if isinstance(val, dict):
+            val = val.get("unique_tournament", val.get("id"))
+        if isinstance(val, bool) or not isinstance(val, int) or val <= 0:
+            raise ValueError(f"tournament map values must be positive integer ids, got {val!r}")
+        ids.append(val)
+    return ids
+
+
+def cmd_warm(args: argparse.Namespace) -> int:
+    if args.sport not in SPORTS:
+        print(
+            f"error: unknown sport {args.sport!r}; expected one of {', '.join(SPORTS)}",
+            file=sys.stderr,
+        )
+        return 2
+    try:
+        ids = _parse_tournament_ids(args.tournament or [])
+        if args.map_file:
+            ids.extend(_load_tournament_map(args.map_file))
+        start = date.fromisoformat(args.date) if args.date else date.today()
+    except (ValueError, OSError) as exc:  # json.JSONDecodeError is a ValueError
+        print(f"error: {exc}", file=sys.stderr)
+        return 2
+    if not ids:
+        print(
+            "error: pass --tournament ID (repeatable/comma-separated) and/or --map-file",
+            file=sys.stderr,
+        )
+        return 2
+    p = Pipeline()
+    try:
+        res = p.warm_tournaments(
+            ids,
+            days=args.days,
+            start=start,
+            sport=args.sport,
+            with_stats=args.stats,
+            with_odds=args.odds,
+        )
     finally:
         p.close()
     print(json.dumps(res))
@@ -97,6 +177,31 @@ def build_parser() -> argparse.ArgumentParser:
     sp.add_argument("--date", help="start date YYYY-MM-DD (default: today)")
     sp.add_argument("--days", type=int, default=1, help="number of consecutive days (default: 1)")
     sp.set_defaults(func=cmd_sync)
+
+    wm = sub.add_parser(
+        "warm",
+        help="warm explicit uniqueTournament ids for a date range (targeted sync)",
+    )
+    wm.add_argument(
+        "--sport", default="football", help="sport slug for normalization (default: football)"
+    )
+    wm.add_argument(
+        "--tournament",
+        action="append",
+        default=[],
+        metavar="ID",
+        help="uniqueTournament id; repeatable or comma-separated (e.g. 18,53)",
+    )
+    wm.add_argument(
+        "--map-file",
+        metavar="PATH",
+        help="JSON map of label -> id (accepts the SPORT_SCRAPER_TOURNAMENTS shape)",
+    )
+    wm.add_argument("--date", help="start date YYYY-MM-DD (default: today)")
+    wm.add_argument("--days", type=int, default=1, help="number of consecutive days (default: 1)")
+    wm.add_argument("--stats", action="store_true", help="also fetch match statistics per event")
+    wm.add_argument("--odds", action="store_true", help="also fetch prematch odds per event")
+    wm.set_defaults(func=cmd_warm)
 
     wp = sub.add_parser("worker", help="run the job-queue worker")
     wp.add_argument("--once", action="store_true", help="process a single job and exit")
