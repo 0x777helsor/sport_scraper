@@ -1,0 +1,26 @@
+# Caddy reverse proxy for the sport_scraper API.
+#
+# Local dev (plain HTTP):
+#   SITE_ADDRESS=http://localhost docker compose --profile https up
+#
+# On a VPS with DNS pointed at the host (automatic HTTPS via Let's Encrypt):
+#   SITE_ADDRESS=api.example.com docker compose --profile https up
+#   (ports 80 and 443 must be reachable from the internet)
+#
+# Caddy terminates TLS and forwards to the internal `api` service.
+
+{$SITE_ADDRESS:http://localhost} {
+	encode gzip zstd
+
+	# Liveness without touching the app (cheap, no DB).
+	respond /healthz 200
+
+	reverse_proxy api:8080 {
+		header_up X-Real-IP {remote_host}
+	}
+
+	log {
+		output stdout
+		format console
+	}
+}

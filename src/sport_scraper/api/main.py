@@ -26,11 +26,12 @@ def health() -> dict:
 
 @app.get("/v1/meta")
 def meta() -> dict:
-    """Operational view: store counts, queue depth, auth state."""
+    """Operational view: store counts, queue depth, upstream health, auth."""
     s = _store()
     try:
         counts = s.counts()
         depth = Jobs(s).depth()
+        upstream = s.upstream_health()
     finally:
         s.close()
     return {
@@ -38,7 +39,24 @@ def meta() -> dict:
         "auth_enabled": auth_enabled(),
         "counts": counts,
         "queue": depth,
+        "upstream": upstream,
     }
+
+
+@app.get("/v1/upstream")
+def upstream(response: Response, _ctx: dict = Depends(authenticate)) -> dict:
+    """Upstream reachability, derived from the raw-payload ledger.
+
+    ``status``: ``ok`` / ``degraded`` / ``unknown``. Never calls upstream.
+    """
+    s = _store()
+    try:
+        health = s.upstream_health()
+    finally:
+        s.close()
+    if health["status"] == "degraded":
+        response.headers["X-Upstream-Status"] = "degraded"
+    return health
 
 
 @app.get("/v1/sports/{sport}/events")

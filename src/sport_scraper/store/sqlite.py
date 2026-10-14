@@ -185,5 +185,59 @@ class Store:
                 "raw_payloads": self.conn.execute("SELECT count(*) FROM raw_payloads").fetchone()[0],
             }
 
+    def upstream_health(self, window_seconds: int = 900) -> dict[str, Any]:
+        """Summarize upstream reachability from the raw-payload ledger.
+
+        Purely derived from ``raw_payloads`` (written by the worker/scheduler),
+        so the API stays read-only. No upstream call is ever made here.
+
+        Returns ``status``: ``unknown`` (no data), ``ok``, or ``degraded``
+        (recent non-2xx traffic or a very recent error).
+        """
+        now = int(time.time())
+        since = now - window_seconds
+        with self._lock:
+            row = self.conn.execute(
+                "SELECT count(*), "
+                "       sum(CASE WHEN status BETWEEN 200 AND 299 THEN 1 ELSE 0 END), "
+                "       sum(CASE WHEN status IS NULL OR status >= 400 THEN 1 ELSE 0 END) "
+                "FROM raw_payloads WHERE fetched_at >= ?",
+                (since,),
+            ).fetchone()
+            total, ok, errors = row[0], row[1] or 0, row[2] or 0
+            last = self.conn.execute(
+                "SELECT url, status, fetched_at FROM raw_payloads ORDER BY id DESC LIMIT 1"
+            ).fetchone()
+            last_err = self.conn.execute(
+                "SELECT url, status, fetched_at FROM raw_payloads "
+                "WHERE status IS NULL OR status >= 400 ORDER BY id DESC LIMIT 1"
+            ).fetchone()
+
+        def _err(r: tuple | None) -> dict[str, Any] | None:
+            if not r:
+                return None
+            return {"url": r[0], "status": r[1], "at": r[2]}
+
+        last_ok = last is not None and last[1] is not None and 200 <= last[1] < 300
+        if last is None:
+            status = "unknown"
+        elif errors and (not last_ok):
+            status = "degraded"
+        else:
+            status = "ok"
+        return {
+            "status": status,
+            "healthy": None if status == "unknown" else status == "ok",
+            "window_seconds": window_seconds,
+            "requests": total,
+            "ok": ok,
+            "errors": errors,
+            "error_rate": (errors / total) if total else 0.0,
+            "last_request": (
+                {"url": last[0], "status": last[1], "at": last[2]} if last else None
+            ),
+            "last_error": _err(last_err),
+        }
+
     def close(self) -> None:
         self.conn.close()

@@ -33,7 +33,8 @@ This project is **standalone** — it is not part of `xpredict`/`ULtFuse`.
 | 3 — Read API | ✅ 202 → poll → 200 verified |
 | 4 — Auth + quotas | ✅ keys + quota + usage verified |
 | 5 — Provider adapter | ✅ drives live API |
-| 6 — Containerize | 🟡 Dockerfile/compose/backup verified |
+| 6 — Containerize | ✅ Dockerfile/compose/Caddy/backup verified |
+| 7 — Harden | ✅ runbook, upstream health, golden fixtures |
 
 ### Verified from this environment
 
@@ -94,7 +95,8 @@ uvicorn sport_scraper.api.main:app --port 8081
 | Method | Path | Behaviour |
 |---|---|---|
 | GET | `/v1/health` | liveness |
-| GET | `/v1/meta` | store counts, queue depth, auth state |
+| GET | `/v1/meta` | store counts, queue depth, upstream health, auth state |
+| GET | `/v1/upstream` | upstream reachability (`ok`/`degraded`/`unknown`) from the raw ledger |
 | GET | `/v1/sports/{sport}/events` | cached fixtures/results (`?on=YYYY-MM-DD&limit&offset`) |
 | GET | `/v1/events/{ss_id}` | event detail — `200` cached / `202` + `Location` on miss |
 | GET | `/v1/events/{ss_id}/statistics` | match statistics (same contract) |
@@ -158,20 +160,43 @@ src/sport_scraper/
 scripts/
   phase0_probe.py      access gate
   keys.py              API key admin
+  backup.sh            online-backup (gzip, rotated)
+  restore.sh           restore a backup
+  capture_fixtures.py  refresh golden fixtures from raw_payloads
   test_jobs.py         queue dedup/lifecycle test
+  test_client.py       retry/backoff/breaker test
   test_e2e.py          202 -> worker -> 200 test
+  test_fixtures.py     golden-fixture drift test
+tests/fixtures/        captured upstream JSON per sport (golden)
+Caddyfile              reverse proxy + automatic HTTPS
+RUNBOOK.md             operations runbook (PLAN.md §16)
 ```
+
+### Tests
+
+```bash
+.venv/bin/python3 scripts/test_jobs.py       # queue dedup + lifecycle
+.venv/bin/python3 scripts/test_client.py     # retries / backoff / breaker
+.venv/bin/python3 scripts/test_e2e.py        # miss -> 202 -> worker -> 200
+.venv/bin/python3 scripts/test_fixtures.py   # per-sport parser drift
+```
+
+Fixtures are captured from real payloads (`scripts/capture_fixtures.py`) and
+replayed through the normalizer, so an upstream shape change fails loudly.
 
 ## Docker
 
 ```bash
-docker compose up --build          # api on :8080, worker, scheduler (6h)
-SPORT_SCRAPER_AUTH=1 docker compose up   # enable API-key auth
+docker compose up --build                       # api on :8080, worker, scheduler (6h)
+SPORT_SCRAPER_AUTH=1 docker compose up          # enable API-key auth
+SITE_ADDRESS=api.example.com docker compose --profile https up   # + Caddy HTTPS
 ```
 
 - `api` — read-only FastAPI (writes only the `jobs` control table on a miss).
 - `worker` — drains the job queue, owns all upstream traffic and data writes.
 - `scheduler` — re-runs discovery every 6h.
+- `caddy` — optional TLS reverse proxy (`--profile https`); automatic HTTPS when
+  `SITE_ADDRESS` is a DNS name pointed at the host.
 - Data lives on the `sport_data` volume (`/app/data`).
 
 ## Backup + restore

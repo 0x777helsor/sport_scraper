@@ -1,0 +1,377 @@
+{
+  "kind": "event",
+  "normalized": {
+    "awayPlayer": null,
+    "awayScore": null,
+    "awayTeam": {
+      "country": {
+        "alpha2": "BR",
+        "alpha3": "BRA",
+        "name": "Brazil",
+        "slug": "brazil"
+      },
+      "flag": null,
+      "id": 1079380,
+      "isWinner": null,
+      "name": "Eagles Gold",
+      "shortName": "Eagles",
+      "slug": "eagles-gold"
+    },
+    "homePlayer": null,
+    "homeScore": null,
+    "homeTeam": {
+      "country": null,
+      "flag": null,
+      "id": 418112,
+      "isWinner": null,
+      "name": "Cestou Basquete",
+      "shortName": null,
+      "slug": "cestou-basquete"
+    },
+    "id": 16214965,
+    "name": null,
+    "roundInfo": null,
+    "slug": "eagles-gold-cestou-basquete",
+    "sport": "basketball",
+    "startDateTime": null,
+    "startTimestamp": 1791825300,
+    "status": {
+      "code": 0,
+      "description": "Not started",
+      "type": "notstarted"
+    },
+    "tournament": {
+      "category": {
+        "alpha2": "BR",
+        "country": {
+          "alpha2": "BR",
+          "alpha3": "BRA",
+          "name": "Brazil",
+          "slug": "brazil"
+        },
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0627\u0644\u0628\u0631\u0627\u0632\u064a\u0644",
+            "ru": "\u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "brazil",
+        "id": 263,
+        "name": "Brazil",
+        "priority": 0,
+        "slug": "brazil",
+        "sport": {
+          "id": 2,
+          "name": "Basketball",
+          "slug": "basketball"
+        }
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "(\u0644\u0633\u0628) \u0627\u0644\u062f\u0648\u0631\u064a\u060c \u062a\u0635\u0646\u064a\u0641 \u0627\u0644\u0647\u0648\u0627\u0629",
+          "ru": "LSB - Estadual Amador, \u041a\u043b\u0430\u0441\u0441\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u044f"
+        },
+        "shortNameTranslation": {}
+      },
+      "id": 179747,
+      "isGroup": false,
+      "name": "LSB - Estadual Amador, Classifica\u00e7\u00e3o",
+      "priority": 0,
+      "slug": "lsb-estadual-amador-classificacao",
+      "uniqueTournament": {
+        "category": {
+          "alpha2": "BR",
+          "country": {
+            "alpha2": "BR",
+            "alpha3": "BRA",
+            "name": "Brazil",
+            "slug": "brazil"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u0627\u0644\u0628\u0631\u0627\u0632\u064a\u0644",
+              "ru": "\u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f"
+            },
+            "shortNameTranslation": {}
+          },
+          "flag": "brazil",
+          "id": 263,
+          "name": "Brazil",
+          "priority": 0,
+          "slug": "brazil",
+          "sport": {
+            "id": 2,
+            "name": "Basketball",
+            "slug": "basketball"
+          }
+        },
+        "country": {},
+        "displayInverseHomeAwayTeams": false,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "LSB - \u0627\u0644\u062f\u0648\u0631\u064a \u0627\u0644\u0647\u0648\u0627\u0629",
+            "ru": "\u041b\u0438\u0433\u0430 LSB \u2014 \u042d\u0441\u0442\u0430\u0434\u0443\u0430 \u0410\u043c\u0430\u0434\u043e\u0440"
+          },
+          "shortNameTranslation": {}
+        },
+        "hasBoxScore": true,
+        "hasEventPlayerStatistics": false,
+        "hasPerformanceGraphFeature": false,
+        "id": 25370,
+        "liveActivityEnabled": false,
+        "name": "LSB - Estadual Amador",
+        "slug": "lsb-estadual-amador",
+        "userCount": 16
+      }
+    },
+    "uid": "mmrdsFMGi",
+    "uniqueTournament": {
+      "category": {
+        "alpha2": "BR",
+        "country": {
+          "alpha2": "BR",
+          "alpha3": "BRA",
+          "name": "Brazil",
+          "slug": "brazil"
+        },
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0627\u0644\u0628\u0631\u0627\u0632\u064a\u0644",
+            "ru": "\u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "brazil",
+        "id": 263,
+        "name": "Brazil",
+        "priority": 0,
+        "slug": "brazil",
+        "sport": {
+          "id": 2,
+          "name": "Basketball",
+          "slug": "basketball"
+        }
+      },
+      "country": {},
+      "displayInverseHomeAwayTeams": false,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "LSB - \u0627\u0644\u062f\u0648\u0631\u064a \u0627\u0644\u0647\u0648\u0627\u0629",
+          "ru": "\u041b\u0438\u0433\u0430 LSB \u2014 \u042d\u0441\u0442\u0430\u0434\u0443\u0430 \u0410\u043c\u0430\u0434\u043e\u0440"
+        },
+        "shortNameTranslation": {}
+      },
+      "hasBoxScore": true,
+      "hasEventPlayerStatistics": false,
+      "hasPerformanceGraphFeature": false,
+      "id": 25370,
+      "liveActivityEnabled": false,
+      "name": "LSB - Estadual Amador",
+      "slug": "lsb-estadual-amador",
+      "userCount": 16
+    },
+    "winnerCode": null
+  },
+  "raw": {
+    "awayScore": {},
+    "awayTeam": {
+      "country": {
+        "alpha2": "BR",
+        "alpha3": "BRA",
+        "name": "Brazil",
+        "slug": "brazil"
+      },
+      "disabled": false,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0625\u064a\u063a\u0644\u0632 \u063a\u0648\u0644\u062f",
+          "ru": "\u041e\u0440\u043b\u044b \u0413\u043e\u043b\u0434"
+        },
+        "shortNameTranslation": {
+          "ar": "\u0625\u064a\u063a\u0644\u0632",
+          "ru": "\u041e\u0440\u043b\u044b"
+        }
+      },
+      "gender": "M",
+      "id": 1079380,
+      "name": "Eagles Gold",
+      "nameCode": "EGO",
+      "national": false,
+      "shortName": "Eagles",
+      "slug": "eagles-gold",
+      "sport": {
+        "id": 2,
+        "name": "Basketball",
+        "slug": "basketball"
+      },
+      "subTeams": [],
+      "teamColors": {
+        "primary": "#374df5",
+        "secondary": "#374df5",
+        "text": "#ffffff"
+      },
+      "type": 0,
+      "userCount": 13
+    },
+    "changes": {
+      "changeTimestamp": 0
+    },
+    "crowdsourcingDataDisplayEnabled": false,
+    "customId": "mmrdsFMGi",
+    "eventFilters": {
+      "category": [
+        "club"
+      ],
+      "gender": [
+        "M"
+      ],
+      "level": [
+        "pro"
+      ]
+    },
+    "feedLocked": false,
+    "finalResultOnly": false,
+    "hasGlobalHighlights": false,
+    "homeScore": {},
+    "homeTeam": {
+      "country": {},
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0633\u064a\u0633\u062a\u0648 \u0628\u0627\u0633\u0643\u064a\u062a",
+          "ru": "\u0421\u0435\u0441\u0442\u043e\u0443 \u0411\u0430\u0441\u043a\u0435\u0442"
+        },
+        "shortNameTranslation": {}
+      },
+      "id": 418112,
+      "name": "Cestou Basquete",
+      "nameCode": "CBA",
+      "national": false,
+      "slug": "cestou-basquete",
+      "sport": {
+        "id": 2,
+        "name": "Basketball",
+        "slug": "basketball"
+      },
+      "subTeams": [],
+      "teamColors": {
+        "primary": "#374df5",
+        "secondary": "#374df5",
+        "text": "#ffffff"
+      },
+      "type": 0,
+      "userCount": 7
+    },
+    "id": 16214965,
+    "isEditor": false,
+    "periods": {
+      "current": "Score",
+      "overtime": "Overtime",
+      "period1": "1st quarter",
+      "period2": "2nd quarter",
+      "period3": "3rd quarter",
+      "period4": "4th quarter"
+    },
+    "season": {
+      "editor": false,
+      "id": 92628,
+      "name": "2026",
+      "year": "2026"
+    },
+    "slug": "eagles-gold-cestou-basquete",
+    "startTimestamp": 1791825300,
+    "status": {
+      "code": 0,
+      "description": "Not started",
+      "type": "notstarted"
+    },
+    "time": {},
+    "tournament": {
+      "category": {
+        "alpha2": "BR",
+        "country": {
+          "alpha2": "BR",
+          "alpha3": "BRA",
+          "name": "Brazil",
+          "slug": "brazil"
+        },
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0627\u0644\u0628\u0631\u0627\u0632\u064a\u0644",
+            "ru": "\u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "brazil",
+        "id": 263,
+        "name": "Brazil",
+        "priority": 0,
+        "slug": "brazil",
+        "sport": {
+          "id": 2,
+          "name": "Basketball",
+          "slug": "basketball"
+        }
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "(\u0644\u0633\u0628) \u0627\u0644\u062f\u0648\u0631\u064a\u060c \u062a\u0635\u0646\u064a\u0641 \u0627\u0644\u0647\u0648\u0627\u0629",
+          "ru": "LSB - Estadual Amador, \u041a\u043b\u0430\u0441\u0441\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u044f"
+        },
+        "shortNameTranslation": {}
+      },
+      "id": 179747,
+      "isGroup": false,
+      "name": "LSB - Estadual Amador, Classifica\u00e7\u00e3o",
+      "priority": 0,
+      "slug": "lsb-estadual-amador-classificacao",
+      "uniqueTournament": {
+        "category": {
+          "alpha2": "BR",
+          "country": {
+            "alpha2": "BR",
+            "alpha3": "BRA",
+            "name": "Brazil",
+            "slug": "brazil"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u0627\u0644\u0628\u0631\u0627\u0632\u064a\u0644",
+              "ru": "\u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f"
+            },
+            "shortNameTranslation": {}
+          },
+          "flag": "brazil",
+          "id": 263,
+          "name": "Brazil",
+          "priority": 0,
+          "slug": "brazil",
+          "sport": {
+            "id": 2,
+            "name": "Basketball",
+            "slug": "basketball"
+          }
+        },
+        "country": {},
+        "displayInverseHomeAwayTeams": false,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "LSB - \u0627\u0644\u062f\u0648\u0631\u064a \u0627\u0644\u0647\u0648\u0627\u0629",
+            "ru": "\u041b\u0438\u0433\u0430 LSB \u2014 \u042d\u0441\u0442\u0430\u0434\u0443\u0430 \u0410\u043c\u0430\u0434\u043e\u0440"
+          },
+          "shortNameTranslation": {}
+        },
+        "hasBoxScore": true,
+        "hasEventPlayerStatistics": false,
+        "hasPerformanceGraphFeature": false,
+        "id": 25370,
+        "liveActivityEnabled": false,
+        "name": "LSB - Estadual Amador",
+        "slug": "lsb-estadual-amador",
+        "userCount": 16
+      }
+    }
+  },
+  "sport": "basketball",
+  "url": "https://www.sofascore.com/api/v1/unique-tournament/25370/scheduled-events/2026-10-13"
+}

@@ -1,0 +1,582 @@
+{
+  "kind": "event",
+  "normalized": {
+    "awayPlayer": null,
+    "awayScore": {
+      "current": 1,
+      "period1": 6,
+      "period2": 6,
+      "period3": 10
+    },
+    "awayTeam": {
+      "country": null,
+      "flag": null,
+      "id": 928406,
+      "isWinner": null,
+      "name": "Cash J / Glasspool L",
+      "shortName": null,
+      "slug": "cash-j-glasspool-l"
+    },
+    "homePlayer": null,
+    "homeScore": {
+      "current": 2,
+      "period1": 7,
+      "period2": 4,
+      "period3": 12
+    },
+    "homeTeam": {
+      "country": null,
+      "flag": null,
+      "id": 1289466,
+      "isWinner": null,
+      "name": "Polmans M / Zielinski J",
+      "shortName": null,
+      "slug": "polmans-m-zielinski-j"
+    },
+    "id": 17242189,
+    "name": null,
+    "roundInfo": {
+      "cupRoundType": 8,
+      "name": "Round of 16",
+      "round": 5,
+      "slug": "round-of-16"
+    },
+    "slug": "polmans-zielinski-cash-glasspool",
+    "sport": "tennis",
+    "startDateTime": null,
+    "startTimestamp": 1791864000,
+    "status": {
+      "code": 100,
+      "description": "Ended",
+      "type": "finished"
+    },
+    "tournament": {
+      "category": {
+        "country": {},
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0631\u0627\u0628\u0637\u0629 \u0645\u062d\u062a\u0631\u0641\u064a \u0627\u0644\u062a\u0646\u0633",
+            "bn": "\u098f\u099f\u09bf\u09aa\u09bf",
+            "hi": "\u0921\u092c\u094d\u0932\u094d\u092f\u0942\u091f\u0940\u090f",
+            "ru": "ATP"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "atp",
+        "id": 3,
+        "name": "ATP",
+        "priority": 8,
+        "slug": "atp",
+        "sport": {
+          "id": 5,
+          "name": "Tennis",
+          "slug": "tennis"
+        }
+      },
+      "endTimestamp": 1792281600,
+      "id": 203040,
+      "isGroup": false,
+      "name": "Shanghai, China, Doubles",
+      "priority": 0,
+      "slug": "shanghai-china-doubles",
+      "startTimestamp": 1791504000,
+      "uniqueTournament": {
+        "category": {
+          "country": {},
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u0631\u0627\u0628\u0637\u0629 \u0645\u062d\u062a\u0631\u0641\u064a \u0627\u0644\u062a\u0646\u0633",
+              "bn": "\u098f\u099f\u09bf\u09aa\u09bf",
+              "hi": "\u0921\u092c\u094d\u0932\u094d\u092f\u0942\u091f\u0940\u090f",
+              "ru": "ATP"
+            },
+            "shortNameTranslation": {}
+          },
+          "flag": "atp",
+          "id": 3,
+          "name": "ATP",
+          "priority": 8,
+          "slug": "atp",
+          "sport": {
+            "id": 5,
+            "name": "Tennis",
+            "slug": "tennis"
+          }
+        },
+        "country": {},
+        "displayInverseHomeAwayTeams": false,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0634\u0646\u063a\u0647\u0627\u064a\u060c \u0632\u0648\u062c\u064a",
+            "ru": "\u0428\u0430\u043d\u0445\u0430\u0439, \u043f\u0430\u0440\u043d\u044b\u0439 \u0440\u0430\u0437\u0440\u044f\u0434"
+          },
+          "shortNameTranslation": {}
+        },
+        "groundType": "Hardcourt outdoor",
+        "hasEventPlayerStatistics": false,
+        "hasPerformanceGraphFeature": false,
+        "id": 2440,
+        "liveActivityEnabled": false,
+        "name": "Shanghai, Doubles",
+        "primaryColorHex": "#002c61",
+        "secondaryColorHex": "#315384",
+        "slug": "shanghai-doubles",
+        "tennisPoints": 1000,
+        "userCount": 206
+      }
+    },
+    "uid": "gtwhsqOpk",
+    "uniqueTournament": {
+      "category": {
+        "country": {},
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0631\u0627\u0628\u0637\u0629 \u0645\u062d\u062a\u0631\u0641\u064a \u0627\u0644\u062a\u0646\u0633",
+            "bn": "\u098f\u099f\u09bf\u09aa\u09bf",
+            "hi": "\u0921\u092c\u094d\u0932\u094d\u092f\u0942\u091f\u0940\u090f",
+            "ru": "ATP"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "atp",
+        "id": 3,
+        "name": "ATP",
+        "priority": 8,
+        "slug": "atp",
+        "sport": {
+          "id": 5,
+          "name": "Tennis",
+          "slug": "tennis"
+        }
+      },
+      "country": {},
+      "displayInverseHomeAwayTeams": false,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0634\u0646\u063a\u0647\u0627\u064a\u060c \u0632\u0648\u062c\u064a",
+          "ru": "\u0428\u0430\u043d\u0445\u0430\u0439, \u043f\u0430\u0440\u043d\u044b\u0439 \u0440\u0430\u0437\u0440\u044f\u0434"
+        },
+        "shortNameTranslation": {}
+      },
+      "groundType": "Hardcourt outdoor",
+      "hasEventPlayerStatistics": false,
+      "hasPerformanceGraphFeature": false,
+      "id": 2440,
+      "liveActivityEnabled": false,
+      "name": "Shanghai, Doubles",
+      "primaryColorHex": "#002c61",
+      "secondaryColorHex": "#315384",
+      "slug": "shanghai-doubles",
+      "tennisPoints": 1000,
+      "userCount": 206
+    },
+    "winnerCode": 1
+  },
+  "raw": {
+    "awayScore": {
+      "current": 1,
+      "display": 1,
+      "normaltime": 1,
+      "period1": 6,
+      "period1TieBreak": 3,
+      "period2": 6,
+      "period3": 10,
+      "period3TieBreak": 10,
+      "point": "10"
+    },
+    "awayTeam": {
+      "country": {},
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0643\u0627\u0634 \u062c / \u063a\u0644\u0627\u0633 \u0628\u0648\u0644 \u0644",
+          "ru": "\u041a\u044d\u0448 \u0414\u0436 / \u0413\u043b\u0430\u0441\u0441\u043f\u0443\u043b \u041b"
+        },
+        "shortNameTranslation": {}
+      },
+      "gender": "M",
+      "id": 928406,
+      "name": "Cash J / Glasspool L",
+      "nameCode": "CAG",
+      "national": false,
+      "slug": "cash-j-glasspool-l",
+      "sport": {
+        "id": 5,
+        "name": "Tennis",
+        "slug": "tennis"
+      },
+      "subTeams": [
+        {
+          "country": {
+            "alpha2": "GB",
+            "alpha3": "GBR",
+            "name": "United Kingdom",
+            "slug": "united-kingdom"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u062c\u0648\u0644\u064a\u0627\u0646 \u0643\u0627\u0634",
+              "ru": "\u041a\u044d\u0448, \u0414\u0436\u0443\u043b\u0438\u0430\u043d"
+            },
+            "shortNameTranslation": {
+              "ar": "\u062c. \u0643\u0627\u0634"
+            }
+          },
+          "gender": "M",
+          "id": 108099,
+          "name": "Julian Cash",
+          "nameCode": "CAS",
+          "national": false,
+          "shortName": "J. Cash",
+          "slug": "cash-julian",
+          "sport": {
+            "id": 5,
+            "name": "Tennis",
+            "slug": "tennis"
+          },
+          "subTeams": [],
+          "teamColors": {
+            "primary": "#374df5",
+            "secondary": "#374df5",
+            "text": "#ffffff"
+          },
+          "type": 1,
+          "userCount": 642
+        },
+        {
+          "country": {
+            "alpha2": "GB",
+            "alpha3": "GBR",
+            "name": "United Kingdom",
+            "slug": "united-kingdom"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u0644\u0648\u064a\u062f \u063a\u0644\u0627\u0633 \u0628\u0648\u0644",
+              "bn": "\u09b2\u09af\u09bc\u09c7\u09a1 \u0997\u09cd\u09b2\u09be\u09b8\u09aa\u09c1\u09b2",
+              "hi": "\u0932\u0949\u092f\u0921 \u0917\u094d\u0932\u093e\u0938\u092a\u0942\u0932",
+              "ru": "\u041b\u043b\u043e\u0439\u0434 \u0413\u043b\u0430\u0441\u0441\u043f\u0443\u043b"
+            },
+            "shortNameTranslation": {
+              "ar": "\u0644. \u0628\u0648\u0644"
+            }
+          },
+          "gender": "M",
+          "id": 59131,
+          "name": "Lloyd Glasspool",
+          "nameCode": "GLA",
+          "national": false,
+          "shortName": "L. Glasspool",
+          "slug": "glasspool-lloyd",
+          "sport": {
+            "id": 5,
+            "name": "Tennis",
+            "slug": "tennis"
+          },
+          "subTeams": [],
+          "teamColors": {
+            "primary": "#374df5",
+            "secondary": "#374df5",
+            "text": "#ffffff"
+          },
+          "type": 1,
+          "userCount": 622
+        }
+      ],
+      "teamColors": {
+        "primary": "#374df5",
+        "secondary": "#374df5",
+        "text": "#ffffff"
+      },
+      "type": 2,
+      "userCount": 632
+    },
+    "awayTeamSeed": "5",
+    "changes": {
+      "changeTimestamp": 1791870849,
+      "changes": [
+        "time.currentPeriodStart",
+        "time.period3"
+      ]
+    },
+    "crowdsourcingDataDisplayEnabled": false,
+    "customId": "gtwhsqOpk",
+    "eventFilters": {
+      "category": [
+        "doubles"
+      ],
+      "gender": [
+        "M"
+      ],
+      "level": [
+        "pro"
+      ],
+      "tournament": [
+        "p1000"
+      ]
+    },
+    "feedLocked": false,
+    "finalResultOnly": false,
+    "firstToServe": 2,
+    "groundType": "Hardcourt outdoor",
+    "hasGlobalHighlights": false,
+    "homeScore": {
+      "current": 2,
+      "display": 2,
+      "normaltime": 2,
+      "period1": 7,
+      "period1TieBreak": 7,
+      "period2": 4,
+      "period3": 12,
+      "period3TieBreak": 10,
+      "point": "11"
+    },
+    "homeTeam": {
+      "country": {},
+      "gender": "M",
+      "id": 1289466,
+      "name": "Polmans M / Zielinski J",
+      "nameCode": "P/Z",
+      "national": false,
+      "slug": "polmans-m-zielinski-j",
+      "sport": {
+        "id": 5,
+        "name": "Tennis",
+        "slug": "tennis"
+      },
+      "subTeams": [
+        {
+          "country": {
+            "alpha2": "AU",
+            "alpha3": "AUS",
+            "name": "Australia",
+            "slug": "australia"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u0645\u0627\u0631\u0643 \u0628\u0648\u0644\u0645\u0627\u0646\u0632",
+              "bn": "\u098f\u09ae\u098f\u0986\u09b0\u09b8\u09bf \u09aa\u09cb\u09b2\u09ae\u09cd\u09af\u09be\u09a8\u09b8",
+              "hi": "\u092e\u093e\u0930\u094d\u0915 \u092a\u0949\u0932\u092e\u0928\u094d\u0938",
+              "ru": "\u041f\u043e\u043b\u043c\u0430\u043d\u0441, \u041c\u0430\u0440\u043a"
+            },
+            "shortNameTranslation": {
+              "ar": "\u0645. \u0628\u0648\u0644\u0645\u0627\u0646\u0632"
+            }
+          },
+          "gender": "M",
+          "id": 80665,
+          "name": "Marc Polmans",
+          "nameCode": "POL",
+          "national": false,
+          "ranking": 429,
+          "shortName": "M. Polmans",
+          "slug": "polmans-marc",
+          "sport": {
+            "id": 5,
+            "name": "Tennis",
+            "slug": "tennis"
+          },
+          "subTeams": [],
+          "teamColors": {
+            "primary": "#374df5",
+            "secondary": "#374df5",
+            "text": "#ffffff"
+          },
+          "type": 1,
+          "userCount": 936
+        },
+        {
+          "country": {
+            "alpha2": "PL",
+            "alpha3": "POL",
+            "name": "Poland",
+            "slug": "poland"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u064a\u0627\u0646 \u0632\u064a\u0644\u064a\u0646\u0633\u0643\u064a",
+              "ru": "\u042f\u043d \u0417\u0435\u043b\u0438\u043d\u044c\u0441\u043a\u0438\u0439"
+            },
+            "shortNameTranslation": {
+              "ar": "\u064a. \u0632\u064a\u0644\u064a\u0646\u0633\u0643\u064a",
+              "ru": "\u042f. \u0417\u0435\u043b\u0438\u043d\u044c\u0441\u043a\u0438\u0439"
+            }
+          },
+          "gender": "M",
+          "id": 112805,
+          "name": "Jan Zielinski",
+          "nameCode": "ZIE",
+          "national": false,
+          "shortName": "J. Zielinski",
+          "slug": "zielinski-jan",
+          "sport": {
+            "id": 5,
+            "name": "Tennis",
+            "slug": "tennis"
+          },
+          "subTeams": [],
+          "teamColors": {
+            "primary": "#374df5",
+            "secondary": "#374df5",
+            "text": "#ffffff"
+          },
+          "type": 1,
+          "userCount": 1731
+        }
+      ],
+      "teamColors": {
+        "primary": "#374df5",
+        "secondary": "#374df5",
+        "text": "#ffffff"
+      },
+      "type": 2,
+      "userCount": 18
+    },
+    "id": 17242189,
+    "isEditor": false,
+    "periods": {
+      "current": "Match",
+      "period1": "1st set",
+      "period2": "2nd set",
+      "period3": "3rd set",
+      "period4": "4th set",
+      "period5": "5th set",
+      "point": "Game"
+    },
+    "roundInfo": {
+      "cupRoundType": 8,
+      "name": "Round of 16",
+      "round": 5,
+      "slug": "round-of-16"
+    },
+    "season": {
+      "editor": false,
+      "id": 82376,
+      "name": "ATP Shanghai, China Men Doubles 2026",
+      "year": "2026"
+    },
+    "slug": "polmans-zielinski-cash-glasspool",
+    "startTimestamp": 1791864000,
+    "status": {
+      "code": 100,
+      "description": "Ended",
+      "type": "finished"
+    },
+    "time": {
+      "currentPeriodStartTimestamp": 1791869773,
+      "period1": 2834,
+      "period2": 2276,
+      "period3": 1042
+    },
+    "tournament": {
+      "category": {
+        "country": {},
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0631\u0627\u0628\u0637\u0629 \u0645\u062d\u062a\u0631\u0641\u064a \u0627\u0644\u062a\u0646\u0633",
+            "bn": "\u098f\u099f\u09bf\u09aa\u09bf",
+            "hi": "\u0921\u092c\u094d\u0932\u094d\u092f\u0942\u091f\u0940\u090f",
+            "ru": "ATP"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "atp",
+        "id": 3,
+        "name": "ATP",
+        "priority": 8,
+        "slug": "atp",
+        "sport": {
+          "id": 5,
+          "name": "Tennis",
+          "slug": "tennis"
+        }
+      },
+      "endTimestamp": 1792281600,
+      "id": 203040,
+      "isGroup": false,
+      "name": "Shanghai, China, Doubles",
+      "priority": 0,
+      "slug": "shanghai-china-doubles",
+      "startTimestamp": 1791504000,
+      "uniqueTournament": {
+        "category": {
+          "country": {},
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u0631\u0627\u0628\u0637\u0629 \u0645\u062d\u062a\u0631\u0641\u064a \u0627\u0644\u062a\u0646\u0633",
+              "bn": "\u098f\u099f\u09bf\u09aa\u09bf",
+              "hi": "\u0921\u092c\u094d\u0932\u094d\u092f\u0942\u091f\u0940\u090f",
+              "ru": "ATP"
+            },
+            "shortNameTranslation": {}
+          },
+          "flag": "atp",
+          "id": 3,
+          "name": "ATP",
+          "priority": 8,
+          "slug": "atp",
+          "sport": {
+            "id": 5,
+            "name": "Tennis",
+            "slug": "tennis"
+          }
+        },
+        "country": {},
+        "displayInverseHomeAwayTeams": false,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0634\u0646\u063a\u0647\u0627\u064a\u060c \u0632\u0648\u062c\u064a",
+            "ru": "\u0428\u0430\u043d\u0445\u0430\u0439, \u043f\u0430\u0440\u043d\u044b\u0439 \u0440\u0430\u0437\u0440\u044f\u0434"
+          },
+          "shortNameTranslation": {}
+        },
+        "groundType": "Hardcourt outdoor",
+        "hasEventPlayerStatistics": false,
+        "hasPerformanceGraphFeature": false,
+        "id": 2440,
+        "liveActivityEnabled": false,
+        "name": "Shanghai, Doubles",
+        "primaryColorHex": "#002c61",
+        "secondaryColorHex": "#315384",
+        "slug": "shanghai-doubles",
+        "tennisPoints": 1000,
+        "userCount": 206
+      }
+    },
+    "venue": {
+      "city": {
+        "country": {
+          "alpha2": "CN",
+          "alpha3": "CHN",
+          "name": "China",
+          "slug": "china"
+        },
+        "id": 18988,
+        "name": "Shanghai"
+      },
+      "country": {
+        "alpha2": "CN",
+        "alpha3": "CHN",
+        "name": "China",
+        "slug": "china"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0645\u0644\u0639\u0628 \u0627\u0644\u0639\u0631\u0636 \u0663",
+          "bn": "\u09b6\u09cb \u0995\u09cb\u09b0\u09cd\u099f 3",
+          "hi": "\u0936\u094b \u0915\u094b\u0930\u094d\u091f 3"
+        },
+        "shortNameTranslation": {}
+      },
+      "hidden": true,
+      "id": 23912,
+      "name": "Show Court 3",
+      "slug": "show-court-3",
+      "stadium": {
+        "name": "Show Court 3"
+      }
+    },
+    "winnerCode": 1
+  },
+  "sport": "tennis",
+  "url": "https://www.sofascore.com/api/v1/unique-tournament/2440/scheduled-events/2026-10-13"
+}

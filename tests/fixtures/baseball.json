@@ -1,0 +1,417 @@
+{
+  "kind": "event",
+  "normalized": {
+    "awayPlayer": null,
+    "awayScore": null,
+    "awayTeam": {
+      "country": {
+        "alpha2": "MX",
+        "alpha3": "MEX",
+        "name": "Mexico",
+        "slug": "mexico"
+      },
+      "flag": null,
+      "id": 1133562,
+      "isWinner": null,
+      "name": "Jaguares de Nayarit",
+      "shortName": "Jaguares ",
+      "slug": "jaguares-de-nayarit"
+    },
+    "homePlayer": null,
+    "homeScore": null,
+    "homeTeam": {
+      "country": {
+        "alpha2": "MX",
+        "alpha3": "MEX",
+        "name": "Mexico",
+        "slug": "mexico"
+      },
+      "flag": null,
+      "id": 407245,
+      "isWinner": null,
+      "name": "Charros de Jalisco",
+      "shortName": "Charros",
+      "slug": "charros-de-jalisco"
+    },
+    "id": 16905749,
+    "name": null,
+    "roundInfo": {
+      "round": 1
+    },
+    "slug": "jaguares-de-nayarit-charros-de-jalisco",
+    "sport": "baseball",
+    "startDateTime": null,
+    "startTimestamp": 1791944100,
+    "status": {
+      "code": 0,
+      "description": "Not started",
+      "type": "notstarted"
+    },
+    "tournament": {
+      "category": {
+        "alpha2": "MX",
+        "country": {
+          "alpha2": "MX",
+          "alpha3": "MEX",
+          "name": "Mexico",
+          "slug": "mexico"
+        },
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0627\u0644\u0645\u0643\u0633\u064a\u0643",
+            "bn": "\u09ae\u09c7\u0995\u09cd\u09b8\u09bf\u0995\u09cb",
+            "hi": "\u092e\u0948\u0915\u094d\u0938\u093f\u0915\u094b",
+            "ru": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "mexico",
+        "id": 1376,
+        "name": "Mexico",
+        "priority": 0,
+        "slug": "mexico",
+        "sport": {
+          "id": 64,
+          "name": "Baseball",
+          "slug": "baseball"
+        }
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0627\u0644\u062f\u0648\u0631\u064a \u0627\u0644\u0645\u0643\u0633\u064a\u0643\u064a \u0644\u0644\u0645\u062d\u064a\u0637 \u0627\u0644\u0647\u0627\u062f\u0626",
+          "bn": "\u09ae\u09c7\u0995\u09cd\u09b8\u09bf\u0995\u09be\u09a8 \u09aa\u09cd\u09af\u09be\u09b8\u09bf\u09ab\u09bf\u0995 \u09b2\u09c0\u0997",
+          "hi": "\u0932\u0940\u0917\u093e \u092e\u0947\u0915\u094d\u0938\u093f\u0915\u093e\u0928\u093e \u0921\u0947\u0932 \u092a\u0948\u0938\u093f\u092b\u093f\u0915\u094b",
+          "ru": "\u041b\u0438\u0433\u0430 \u041c\u0435\u043a\u0441\u0438\u043a\u0438 \u043d\u0430 \u0422\u0438\u0445\u043e\u043c \u043e\u043a\u0435\u0430\u043d\u0435"
+        },
+        "shortNameTranslation": {}
+      },
+      "id": 108847,
+      "isGroup": false,
+      "isLive": false,
+      "name": "Liga Mexicana del Pacifico",
+      "priority": 0,
+      "slug": "liga-mexicana-del-pacifico",
+      "uniqueTournament": {
+        "category": {
+          "alpha2": "MX",
+          "country": {
+            "alpha2": "MX",
+            "alpha3": "MEX",
+            "name": "Mexico",
+            "slug": "mexico"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u0627\u0644\u0645\u0643\u0633\u064a\u0643",
+              "bn": "\u09ae\u09c7\u0995\u09cd\u09b8\u09bf\u0995\u09cb",
+              "hi": "\u092e\u0948\u0915\u094d\u0938\u093f\u0915\u094b",
+              "ru": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430"
+            },
+            "shortNameTranslation": {}
+          },
+          "flag": "mexico",
+          "id": 1376,
+          "name": "Mexico",
+          "priority": 0,
+          "slug": "mexico",
+          "sport": {
+            "id": 64,
+            "name": "Baseball",
+            "slug": "baseball"
+          }
+        },
+        "country": {},
+        "displayInverseHomeAwayTeams": true,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u062f\u0648\u0631\u064a \u0627\u0644\u0645\u062d\u064a\u0637 \u0627\u0644\u0647\u0627\u062f\u0626 \u0627\u0644\u0645\u0643\u0633\u064a\u0643\u064a",
+            "bn": "\u09b2\u09c0\u0997\u09be \u09ae\u09c7\u0995\u09cd\u09b8\u09bf\u0995\u09be\u09a8\u09be \u09a6\u09c7\u09b2 \u09aa\u09cd\u09af\u09be\u09b8\u09bf\u09ab\u09bf\u0995\u09cb",
+            "hi": "\u0932\u0940\u0917\u093e \u092e\u0947\u0915\u094d\u0938\u093f\u0915\u093e\u0928\u093e \u0921\u0947\u0932 \u092a\u0948\u0938\u093f\u092b\u093f\u0915\u094b",
+            "ru": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f \u043b\u0438\u0433\u0430 \u0422\u0438\u0445\u043e\u0433\u043e \u043e\u043a\u0435\u0430\u043d\u0430"
+          },
+          "shortNameTranslation": {}
+        },
+        "hasEventPlayerStatistics": false,
+        "hasPerformanceGraphFeature": false,
+        "id": 19488,
+        "liveActivityEnabled": false,
+        "name": "Liga Mexicana del Pacifico",
+        "primaryColorHex": "#1D497C",
+        "secondaryColorHex": "#59BB80",
+        "slug": "liga-mexicana-del-pacifico",
+        "userCount": 822
+      }
+    },
+    "uid": "VUmdsmwdj",
+    "uniqueTournament": {
+      "category": {
+        "alpha2": "MX",
+        "country": {
+          "alpha2": "MX",
+          "alpha3": "MEX",
+          "name": "Mexico",
+          "slug": "mexico"
+        },
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0627\u0644\u0645\u0643\u0633\u064a\u0643",
+            "bn": "\u09ae\u09c7\u0995\u09cd\u09b8\u09bf\u0995\u09cb",
+            "hi": "\u092e\u0948\u0915\u094d\u0938\u093f\u0915\u094b",
+            "ru": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "mexico",
+        "id": 1376,
+        "name": "Mexico",
+        "priority": 0,
+        "slug": "mexico",
+        "sport": {
+          "id": 64,
+          "name": "Baseball",
+          "slug": "baseball"
+        }
+      },
+      "country": {},
+      "displayInverseHomeAwayTeams": true,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u062f\u0648\u0631\u064a \u0627\u0644\u0645\u062d\u064a\u0637 \u0627\u0644\u0647\u0627\u062f\u0626 \u0627\u0644\u0645\u0643\u0633\u064a\u0643\u064a",
+          "bn": "\u09b2\u09c0\u0997\u09be \u09ae\u09c7\u0995\u09cd\u09b8\u09bf\u0995\u09be\u09a8\u09be \u09a6\u09c7\u09b2 \u09aa\u09cd\u09af\u09be\u09b8\u09bf\u09ab\u09bf\u0995\u09cb",
+          "hi": "\u0932\u0940\u0917\u093e \u092e\u0947\u0915\u094d\u0938\u093f\u0915\u093e\u0928\u093e \u0921\u0947\u0932 \u092a\u0948\u0938\u093f\u092b\u093f\u0915\u094b",
+          "ru": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f \u043b\u0438\u0433\u0430 \u0422\u0438\u0445\u043e\u0433\u043e \u043e\u043a\u0435\u0430\u043d\u0430"
+        },
+        "shortNameTranslation": {}
+      },
+      "hasEventPlayerStatistics": false,
+      "hasPerformanceGraphFeature": false,
+      "id": 19488,
+      "liveActivityEnabled": false,
+      "name": "Liga Mexicana del Pacifico",
+      "primaryColorHex": "#1D497C",
+      "secondaryColorHex": "#59BB80",
+      "slug": "liga-mexicana-del-pacifico",
+      "userCount": 822
+    },
+    "winnerCode": null
+  },
+  "raw": {
+    "awayScore": {},
+    "awayTeam": {
+      "country": {
+        "alpha2": "MX",
+        "alpha3": "MEX",
+        "name": "Mexico",
+        "slug": "mexico"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u062c\u0627\u0643\u0648\u0627\u0631\u0632 \u062f\u064a \u0646\u0627\u064a\u0627\u0631\u064a\u062a",
+          "ru": "\u0425\u0430\u0433\u0443\u0430\u0440\u0435\u0441 \u0434\u0435 \u041d\u0430\u044f\u0440\u0438\u0442"
+        },
+        "shortNameTranslation": {
+          "ru": "\u0425\u0430\u0433\u0443\u0430\u0440\u0435\u0441"
+        }
+      },
+      "gender": "M",
+      "id": 1133562,
+      "name": "Jaguares de Nayarit",
+      "nameCode": "JAG",
+      "national": false,
+      "shortName": "Jaguares ",
+      "slug": "jaguares-de-nayarit",
+      "sport": {
+        "id": 64,
+        "name": "Baseball",
+        "slug": "baseball"
+      },
+      "subTeams": [],
+      "teamColors": {
+        "primary": "#374df5",
+        "secondary": "#374df5",
+        "text": "#ffffff"
+      },
+      "type": 0,
+      "userCount": 337
+    },
+    "changes": {
+      "changeTimestamp": 0
+    },
+    "crowdsourcingDataDisplayEnabled": false,
+    "customId": "VUmdsmwdj",
+    "feedLocked": false,
+    "finalResultOnly": false,
+    "hasGlobalHighlights": false,
+    "homeScore": {},
+    "homeTeam": {
+      "country": {
+        "alpha2": "MX",
+        "alpha3": "MEX",
+        "name": "Mexico",
+        "slug": "mexico"
+      },
+      "disabled": false,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u062a\u0634\u064a\u0631\u0648\u0633 \u062f\u064a \u062e\u0627\u0644\u064a\u0633\u0643\u0648",
+          "ru": "\u0427\u0430\u0440\u0440\u043e\u0441 \u0434\u0435 \u0425\u0430\u043b\u0438\u0441\u043a\u043e"
+        },
+        "shortNameTranslation": {
+          "ar": "\u062a\u0634\u064a\u0631\u0648\u0633",
+          "bn": "\u099a\u09be\u09b0\u09cb\u09b8",
+          "hi": "\u091a\u093e\u0930\u094b\u0938",
+          "ru": "\u0427\u0430\u0440\u0440\u043e\u0441"
+        }
+      },
+      "gender": "M",
+      "id": 407245,
+      "name": "Charros de Jalisco",
+      "nameCode": "CDJ",
+      "national": false,
+      "shortName": "Charros",
+      "slug": "charros-de-jalisco",
+      "sport": {
+        "id": 64,
+        "name": "Baseball",
+        "slug": "baseball"
+      },
+      "subTeams": [],
+      "teamColors": {
+        "primary": "#374df5",
+        "secondary": "#374df5",
+        "text": "#ffffff"
+      },
+      "type": 0,
+      "userCount": 2499
+    },
+    "id": 16905749,
+    "isEditor": false,
+    "periods": {
+      "current": "Match",
+      "extra1": "10th Inning",
+      "inning1": "1st Inning",
+      "inning2": "2nd Inning",
+      "inning3": "3rd Inning",
+      "inning4": "4th Inning",
+      "inning5": "5th Inning",
+      "inning6": "6th Inning",
+      "inning7": "7th Inning",
+      "inning8": "8th Inning",
+      "inning9": "9th Inning"
+    },
+    "roundInfo": {
+      "round": 1
+    },
+    "season": {
+      "editor": false,
+      "id": 101657,
+      "name": "Liga Mexicana del Pacifico 26/27",
+      "year": "26/27"
+    },
+    "slug": "jaguares-de-nayarit-charros-de-jalisco",
+    "startTimestamp": 1791944100,
+    "status": {
+      "code": 0,
+      "description": "Not started",
+      "type": "notstarted"
+    },
+    "time": {},
+    "tournament": {
+      "category": {
+        "alpha2": "MX",
+        "country": {
+          "alpha2": "MX",
+          "alpha3": "MEX",
+          "name": "Mexico",
+          "slug": "mexico"
+        },
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0627\u0644\u0645\u0643\u0633\u064a\u0643",
+            "bn": "\u09ae\u09c7\u0995\u09cd\u09b8\u09bf\u0995\u09cb",
+            "hi": "\u092e\u0948\u0915\u094d\u0938\u093f\u0915\u094b",
+            "ru": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "mexico",
+        "id": 1376,
+        "name": "Mexico",
+        "priority": 0,
+        "slug": "mexico",
+        "sport": {
+          "id": 64,
+          "name": "Baseball",
+          "slug": "baseball"
+        }
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0627\u0644\u062f\u0648\u0631\u064a \u0627\u0644\u0645\u0643\u0633\u064a\u0643\u064a \u0644\u0644\u0645\u062d\u064a\u0637 \u0627\u0644\u0647\u0627\u062f\u0626",
+          "bn": "\u09ae\u09c7\u0995\u09cd\u09b8\u09bf\u0995\u09be\u09a8 \u09aa\u09cd\u09af\u09be\u09b8\u09bf\u09ab\u09bf\u0995 \u09b2\u09c0\u0997",
+          "hi": "\u0932\u0940\u0917\u093e \u092e\u0947\u0915\u094d\u0938\u093f\u0915\u093e\u0928\u093e \u0921\u0947\u0932 \u092a\u0948\u0938\u093f\u092b\u093f\u0915\u094b",
+          "ru": "\u041b\u0438\u0433\u0430 \u041c\u0435\u043a\u0441\u0438\u043a\u0438 \u043d\u0430 \u0422\u0438\u0445\u043e\u043c \u043e\u043a\u0435\u0430\u043d\u0435"
+        },
+        "shortNameTranslation": {}
+      },
+      "id": 108847,
+      "isGroup": false,
+      "isLive": false,
+      "name": "Liga Mexicana del Pacifico",
+      "priority": 0,
+      "slug": "liga-mexicana-del-pacifico",
+      "uniqueTournament": {
+        "category": {
+          "alpha2": "MX",
+          "country": {
+            "alpha2": "MX",
+            "alpha3": "MEX",
+            "name": "Mexico",
+            "slug": "mexico"
+          },
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u0627\u0644\u0645\u0643\u0633\u064a\u0643",
+              "bn": "\u09ae\u09c7\u0995\u09cd\u09b8\u09bf\u0995\u09cb",
+              "hi": "\u092e\u0948\u0915\u094d\u0938\u093f\u0915\u094b",
+              "ru": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430"
+            },
+            "shortNameTranslation": {}
+          },
+          "flag": "mexico",
+          "id": 1376,
+          "name": "Mexico",
+          "priority": 0,
+          "slug": "mexico",
+          "sport": {
+            "id": 64,
+            "name": "Baseball",
+            "slug": "baseball"
+          }
+        },
+        "country": {},
+        "displayInverseHomeAwayTeams": true,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u062f\u0648\u0631\u064a \u0627\u0644\u0645\u062d\u064a\u0637 \u0627\u0644\u0647\u0627\u062f\u0626 \u0627\u0644\u0645\u0643\u0633\u064a\u0643\u064a",
+            "bn": "\u09b2\u09c0\u0997\u09be \u09ae\u09c7\u0995\u09cd\u09b8\u09bf\u0995\u09be\u09a8\u09be \u09a6\u09c7\u09b2 \u09aa\u09cd\u09af\u09be\u09b8\u09bf\u09ab\u09bf\u0995\u09cb",
+            "hi": "\u0932\u0940\u0917\u093e \u092e\u0947\u0915\u094d\u0938\u093f\u0915\u093e\u0928\u093e \u0921\u0947\u0932 \u092a\u0948\u0938\u093f\u092b\u093f\u0915\u094b",
+            "ru": "\u041c\u0435\u043a\u0441\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f \u043b\u0438\u0433\u0430 \u0422\u0438\u0445\u043e\u0433\u043e \u043e\u043a\u0435\u0430\u043d\u0430"
+          },
+          "shortNameTranslation": {}
+        },
+        "hasEventPlayerStatistics": false,
+        "hasPerformanceGraphFeature": false,
+        "id": 19488,
+        "liveActivityEnabled": false,
+        "name": "Liga Mexicana del Pacifico",
+        "primaryColorHex": "#1D497C",
+        "secondaryColorHex": "#59BB80",
+        "slug": "liga-mexicana-del-pacifico",
+        "userCount": 822
+      }
+    }
+  },
+  "sport": "baseball",
+  "url": "https://www.sofascore.com/api/v1/unique-tournament/19488/scheduled-events/2026-10-13"
+}

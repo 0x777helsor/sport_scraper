@@ -1,0 +1,17 @@
+{
+  "kind": "odds",
+  "normalized": {
+    "error": {
+      "code": 404,
+      "message": "Not Found"
+    }
+  },
+  "raw": {
+    "error": {
+      "code": 404,
+      "message": "Not Found"
+    }
+  },
+  "sport": "basketball",
+  "url": "https://www.sofascore.com/api/v1/event/16214965/odds/1/all"
+}

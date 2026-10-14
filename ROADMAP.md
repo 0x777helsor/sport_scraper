@@ -20,8 +20,8 @@ Design detail lives in [`PLAN.md`](PLAN.md). Overview in [`README.md`](README.md
 | 3 | Read API | ✅ done | 202 → poll → 200 verified |
 | 4 | Auth + quotas | ✅ done | revoke + quota enforced |
 | 5 | Provider adapter | ✅ done | adapter drives live API end-to-end |
-| 6 | Containerize | 🟡 in progress | `docker compose up` + restore tested |
-| 7 | Harden | 🟡 in progress | failure modes documented & simulated |
+| 6 | Containerize | ✅ done | `docker compose up` + restore tested |
+| 7 | Harden | ✅ done | failure modes documented & simulated |
 
 Legend: ⬜ not started · 🟡 in progress · ✅ done · ⛔ blocked
 
@@ -170,7 +170,7 @@ metering.
 - [x] `docker-compose.yml`: `api`, `worker`, `scheduler` (shared volume)
 - [x] Persistent volume for `sport_scraper.db` + `raw/`
 - [x] Backup script (`sqlite3 .backup`) + documented restore
-- [ ] `Caddyfile` (HTTPS for when a VPS move happens)
+- [x] `Caddyfile` + opt-in `caddy` Compose profile (HTTPS for a VPS move)
 
 **Gate**
 
@@ -186,17 +186,17 @@ metering.
 
 **Tasks**
 
-- [ ] Upstream circuit breaker + alerting
-- [ ] `GET /v1/meta` upstream-health + queue-depth reporting
-- [ ] Structured logging
-- [ ] Golden-fixture tests per sport (drift detection)
-- [ ] Runbook completed (`PLAN.md` §16)
-- [ ] Simulate: upstream 403 storm, 429 storm, worker crash, backup restore
+- [x] Upstream circuit breaker (`403`/`401` trips it) + `WARN` logging
+- [x] `GET /v1/meta` + `GET /v1/upstream` upstream-health and queue-depth reporting
+- [x] Structured logging (worker + client)
+- [x] Golden-fixture tests per sport (`scripts/capture_fixtures.py`, `scripts/test_fixtures.py`)
+- [x] Runbook completed (`RUNBOOK.md`, `PLAN.md` §16)
+- [x] Simulate: upstream 403 storm, 429 storm, worker crash, backup restore
 
 **Gate**
 
-- [ ] Each simulated failure is detected and has a documented response
-- [ ] Full-project definition of done below is satisfied
+- [x] Each simulated failure is detected and has a documented response (RUNBOOK §3)
+- [x] Full-project definition of done below is satisfied
 
 ---
 

@@ -1,0 +1,447 @@
+{
+  "kind": "event",
+  "normalized": {
+    "awayPlayer": null,
+    "awayScore": {
+      "current": 704
+    },
+    "awayTeam": {
+      "country": {
+        "alpha2": "AU",
+        "alpha3": "AUS",
+        "name": "Australia",
+        "slug": "australia"
+      },
+      "flag": null,
+      "id": 187746,
+      "isWinner": null,
+      "name": "Australia",
+      "shortName": "AUS",
+      "slug": "australia"
+    },
+    "homePlayer": null,
+    "homeScore": {
+      "current": 490
+    },
+    "homeTeam": {
+      "country": {
+        "alpha2": "ZA",
+        "alpha3": "ZAF",
+        "name": "South Africa",
+        "slug": "south-africa"
+      },
+      "flag": null,
+      "id": 187747,
+      "isWinner": null,
+      "name": "South Africa",
+      "shortName": "SA",
+      "slug": "south-africa"
+    },
+    "id": 15606723,
+    "name": null,
+    "roundInfo": null,
+    "slug": "south-africa-australia",
+    "sport": "cricket",
+    "startDateTime": null,
+    "startTimestamp": 1791531000,
+    "status": {
+      "code": 100,
+      "description": "Ended",
+      "type": "finished"
+    },
+    "tournament": {
+      "category": {
+        "country": {},
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0627\u0644\u0639\u0627\u0644\u0645",
+            "bn": "\u09ac\u09bf\u09b6\u09cd\u09ac",
+            "hi": "\u0935\u093f\u0936\u094d\u0935",
+            "ru": "\u041c\u0438\u0440"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "international",
+        "id": 1343,
+        "name": "World",
+        "priority": 0,
+        "slug": "world",
+        "sport": {
+          "id": 62,
+          "name": "Cricket",
+          "slug": "cricket"
+        }
+      },
+      "endTimestamp": 1793404800,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0623\u0633\u062a\u0631\u0627\u0644\u064a\u0627 \u0641\u064a \u062c\u0646\u0648\u0628 \u0623\u0641\u0631\u064a\u0642\u064a\u0627\u060c \u0633\u0644\u0633\u0644\u0629 3 \u0627\u062e\u062a\u0628\u0627\u0631",
+          "ru": "\u0422\u0443\u0440\u043d\u0438\u0440 Test \u0410\u0432\u0441\u0442\u0440\u0430\u043b\u0438\u044f \u0432 \u042e\u0436\u043d\u043e\u0439 \u0410\u0444\u0440\u0438\u043a\u0435, 3 \u043c\u0430\u0442\u0447\u0430"
+        },
+        "shortNameTranslation": {}
+      },
+      "id": 175916,
+      "isGroup": false,
+      "name": "Australia in South Africa, 3 Test Series",
+      "priority": 77,
+      "slug": "australia-in-south-africa-3-test-series",
+      "startTimestamp": 1791504000,
+      "uniqueTournament": {
+        "category": {
+          "country": {},
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u0627\u0644\u0639\u0627\u0644\u0645",
+              "bn": "\u09ac\u09bf\u09b6\u09cd\u09ac",
+              "hi": "\u0935\u093f\u0936\u094d\u0935",
+              "ru": "\u041c\u0438\u0440"
+            },
+            "shortNameTranslation": {}
+          },
+          "flag": "international",
+          "id": 1343,
+          "name": "World",
+          "priority": 0,
+          "slug": "world",
+          "sport": {
+            "id": 62,
+            "name": "Cricket",
+            "slug": "cricket"
+          }
+        },
+        "country": {},
+        "displayInverseHomeAwayTeams": false,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0628\u0637\u0648\u0644\u0629 \u0627\u062e\u062a\u0628\u0627\u0631 \u0627\u0644\u0639\u0627\u0644\u0645 (ICC)",
+            "ru": "\u0427\u0435\u043c\u043f\u0438\u043e\u043d\u0430\u0442 \u043c\u0438\u0440\u0430 \u043f\u043e \u0442\u0435\u0441\u0442\u043e\u0432\u043e\u043c\u0443 \u043a\u0440\u0438\u043a\u0435\u0442\u0443 ICC"
+          },
+          "shortNameTranslation": {}
+        },
+        "hasEventPlayerStatistics": false,
+        "hasPerformanceGraphFeature": false,
+        "id": 18833,
+        "liveActivityEnabled": false,
+        "name": "ICC World Test Championship",
+        "slug": "icc-world-test-championship",
+        "userCount": 1763
+      }
+    },
+    "uid": "WeAbsXeAb",
+    "uniqueTournament": {
+      "category": {
+        "country": {},
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0627\u0644\u0639\u0627\u0644\u0645",
+            "bn": "\u09ac\u09bf\u09b6\u09cd\u09ac",
+            "hi": "\u0935\u093f\u0936\u094d\u0935",
+            "ru": "\u041c\u0438\u0440"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "international",
+        "id": 1343,
+        "name": "World",
+        "priority": 0,
+        "slug": "world",
+        "sport": {
+          "id": 62,
+          "name": "Cricket",
+          "slug": "cricket"
+        }
+      },
+      "country": {},
+      "displayInverseHomeAwayTeams": false,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0628\u0637\u0648\u0644\u0629 \u0627\u062e\u062a\u0628\u0627\u0631 \u0627\u0644\u0639\u0627\u0644\u0645 (ICC)",
+          "ru": "\u0427\u0435\u043c\u043f\u0438\u043e\u043d\u0430\u0442 \u043c\u0438\u0440\u0430 \u043f\u043e \u0442\u0435\u0441\u0442\u043e\u0432\u043e\u043c\u0443 \u043a\u0440\u0438\u043a\u0435\u0442\u0443 ICC"
+        },
+        "shortNameTranslation": {}
+      },
+      "hasEventPlayerStatistics": false,
+      "hasPerformanceGraphFeature": false,
+      "id": 18833,
+      "liveActivityEnabled": false,
+      "name": "ICC World Test Championship",
+      "slug": "icc-world-test-championship",
+      "userCount": 1763
+    },
+    "winnerCode": 2
+  },
+  "raw": {
+    "awayScore": {
+      "current": 704,
+      "display": 704,
+      "innings": {
+        "inning1": {
+          "overs": 137.2,
+          "runRate": 2.84,
+          "score": 390,
+          "wickets": 10
+        },
+        "inning2": {
+          "overs": 58,
+          "runRate": 5.41,
+          "score": 314,
+          "wickets": 6
+        }
+      }
+    },
+    "awayTeam": {
+      "country": {
+        "alpha2": "AU",
+        "alpha3": "AUS",
+        "name": "Australia",
+        "slug": "australia"
+      },
+      "disabled": false,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0623\u0633\u062a\u0631\u0627\u0644\u064a\u0627",
+          "ru": "\u0410\u0432\u0441\u0442\u0440\u0430\u043b\u0438\u044f"
+        },
+        "shortNameTranslation": {
+          "bn": "\u098f\u0987\u0989\u098f\u09b8",
+          "hi": "\u090f\u092f\u0942\u090f\u0938",
+          "ru": "\u0410\u0412\u0422"
+        }
+      },
+      "gender": "M",
+      "id": 187746,
+      "name": "Australia",
+      "nameCode": "AUS",
+      "national": true,
+      "shortName": "AUS",
+      "slug": "australia",
+      "sport": {
+        "id": 62,
+        "name": "Cricket",
+        "slug": "cricket"
+      },
+      "subTeams": [],
+      "teamColors": {
+        "primary": "#ffcc00",
+        "secondary": "#2d324b",
+        "text": "#2d324b"
+      },
+      "type": 0,
+      "userCount": 21619
+    },
+    "changes": {
+      "changeTimestamp": 1791890618,
+      "changes": [
+        "status.code",
+        "status.description",
+        "status.type"
+      ]
+    },
+    "coverage": 1,
+    "crowdsourcingDataDisplayEnabled": false,
+    "customId": "WeAbsXeAb",
+    "endTimestamp": 1791901800,
+    "feedLocked": false,
+    "finalResultOnly": false,
+    "hasGlobalHighlights": false,
+    "homeScore": {
+      "current": 490,
+      "display": 490,
+      "innings": {
+        "inning1": {
+          "overs": 78,
+          "runRate": 3.64,
+          "score": 284,
+          "wickets": 10
+        },
+        "inning2": {
+          "overs": 86.5,
+          "runRate": 2.37,
+          "score": 206,
+          "targetRunRate": 3.03,
+          "wickets": 10
+        }
+      }
+    },
+    "homeTeam": {
+      "country": {
+        "alpha2": "ZA",
+        "alpha3": "ZAF",
+        "name": "South Africa",
+        "slug": "south-africa"
+      },
+      "disabled": false,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u062c\u0646\u0648\u0628 \u0623\u0641\u0631\u064a\u0642\u064a\u0627",
+          "ru": "\u042e\u0436\u043d\u0430\u044f \u0410\u0444\u0440\u0438\u043a\u0430"
+        },
+        "shortNameTranslation": {
+          "bn": "\u098f\u09b8.\u098f",
+          "hi": "\u090f\u0938\u090f",
+          "ru": "\u042e\u0416"
+        }
+      },
+      "gender": "M",
+      "id": 187747,
+      "name": "South Africa",
+      "nameCode": "RSA",
+      "national": true,
+      "shortName": "SA",
+      "slug": "south-africa",
+      "sport": {
+        "id": 62,
+        "name": "Cricket",
+        "slug": "cricket"
+      },
+      "subTeams": [],
+      "teamColors": {
+        "primary": "#ffd800",
+        "secondary": "#008040",
+        "text": "#008040"
+      },
+      "type": 0,
+      "userCount": 19041
+    },
+    "id": 15606723,
+    "isEditor": false,
+    "note": "Australia beat South Africa by 214 runs",
+    "periods": {
+      "current": "Match",
+      "inning1": "1st Inning",
+      "inning2": "2nd Inning",
+      "inning3": "3rd Inning",
+      "inning4": "4th Inning"
+    },
+    "season": {
+      "editor": false,
+      "id": 79087,
+      "name": "2026",
+      "year": "2026"
+    },
+    "slug": "south-africa-australia",
+    "startTimestamp": 1791531000,
+    "status": {
+      "code": 100,
+      "description": "Ended",
+      "type": "finished"
+    },
+    "time": {},
+    "tournament": {
+      "category": {
+        "country": {},
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0627\u0644\u0639\u0627\u0644\u0645",
+            "bn": "\u09ac\u09bf\u09b6\u09cd\u09ac",
+            "hi": "\u0935\u093f\u0936\u094d\u0935",
+            "ru": "\u041c\u0438\u0440"
+          },
+          "shortNameTranslation": {}
+        },
+        "flag": "international",
+        "id": 1343,
+        "name": "World",
+        "priority": 0,
+        "slug": "world",
+        "sport": {
+          "id": 62,
+          "name": "Cricket",
+          "slug": "cricket"
+        }
+      },
+      "endTimestamp": 1793404800,
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0623\u0633\u062a\u0631\u0627\u0644\u064a\u0627 \u0641\u064a \u062c\u0646\u0648\u0628 \u0623\u0641\u0631\u064a\u0642\u064a\u0627\u060c \u0633\u0644\u0633\u0644\u0629 3 \u0627\u062e\u062a\u0628\u0627\u0631",
+          "ru": "\u0422\u0443\u0440\u043d\u0438\u0440 Test \u0410\u0432\u0441\u0442\u0440\u0430\u043b\u0438\u044f \u0432 \u042e\u0436\u043d\u043e\u0439 \u0410\u0444\u0440\u0438\u043a\u0435, 3 \u043c\u0430\u0442\u0447\u0430"
+        },
+        "shortNameTranslation": {}
+      },
+      "id": 175916,
+      "isGroup": false,
+      "name": "Australia in South Africa, 3 Test Series",
+      "priority": 77,
+      "slug": "australia-in-south-africa-3-test-series",
+      "startTimestamp": 1791504000,
+      "uniqueTournament": {
+        "category": {
+          "country": {},
+          "fieldTranslations": {
+            "nameTranslation": {
+              "ar": "\u0627\u0644\u0639\u0627\u0644\u0645",
+              "bn": "\u09ac\u09bf\u09b6\u09cd\u09ac",
+              "hi": "\u0935\u093f\u0936\u094d\u0935",
+              "ru": "\u041c\u0438\u0440"
+            },
+            "shortNameTranslation": {}
+          },
+          "flag": "international",
+          "id": 1343,
+          "name": "World",
+          "priority": 0,
+          "slug": "world",
+          "sport": {
+            "id": 62,
+            "name": "Cricket",
+            "slug": "cricket"
+          }
+        },
+        "country": {},
+        "displayInverseHomeAwayTeams": false,
+        "fieldTranslations": {
+          "nameTranslation": {
+            "ar": "\u0628\u0637\u0648\u0644\u0629 \u0627\u062e\u062a\u0628\u0627\u0631 \u0627\u0644\u0639\u0627\u0644\u0645 (ICC)",
+            "ru": "\u0427\u0435\u043c\u043f\u0438\u043e\u043d\u0430\u0442 \u043c\u0438\u0440\u0430 \u043f\u043e \u0442\u0435\u0441\u0442\u043e\u0432\u043e\u043c\u0443 \u043a\u0440\u0438\u043a\u0435\u0442\u0443 ICC"
+          },
+          "shortNameTranslation": {}
+        },
+        "hasEventPlayerStatistics": false,
+        "hasPerformanceGraphFeature": false,
+        "id": 18833,
+        "liveActivityEnabled": false,
+        "name": "ICC World Test Championship",
+        "slug": "icc-world-test-championship",
+        "userCount": 1763
+      }
+    },
+    "venue": {
+      "capacity": 25000,
+      "city": {
+        "country": {
+          "alpha2": "ZA",
+          "alpha3": "ZAF",
+          "name": "South Africa",
+          "slug": "south-africa"
+        },
+        "id": 19994,
+        "name": "Durban"
+      },
+      "country": {
+        "alpha2": "ZA",
+        "alpha3": "ZAF",
+        "name": "South Africa",
+        "slug": "south-africa"
+      },
+      "fieldTranslations": {
+        "nameTranslation": {
+          "ar": "\u0643\u064a\u0646\u063a\u0632 \u0645\u064a\u062f",
+          "bn": "\u0995\u09bf\u0982\u09b8\u09ae\u09c7\u09a1",
+          "hi": "\u0915\u093f\u0902\u0917\u094d\u0938\u092e\u0940\u0921"
+        },
+        "shortNameTranslation": {}
+      },
+      "hidden": true,
+      "id": 24810,
+      "name": "Kingsmead",
+      "slug": "kingsmead",
+      "stadium": {
+        "capacity": 25000,
+        "name": "Kingsmead"
+      }
+    },
+    "winnerCode": 2
+  },
+  "sport": "cricket",
+  "url": "https://www.sofascore.com/api/v1/unique-tournament/18833/scheduled-events/2026-10-13"
+}

@@ -26,7 +26,7 @@ services:
     depends_on:
       - api
 
-  # Periodic discovery of today's + tomorrow's fixtures.
+  # Periodic discovery of today's fixtures.
   scheduler:
     build: .
     image: sport-scraper:latest
@@ -37,5 +37,26 @@ services:
       - sport_data:/app/data
     restart: unless-stopped
 
+  # Opt-in TLS terminator. Enable with: docker compose --profile https up
+  # Set SITE_ADDRESS to a real domain for automatic Let's Encrypt certificates.
+  caddy:
+    image: caddy:2
+    profiles: ["https"]
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SITE_ADDRESS: "${SITE_ADDRESS:-http://localhost}"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+    depends_on:
+      - api
+
 volumes:
   sport_data:
+  caddy_data:
+  caddy_config:
+
